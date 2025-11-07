@@ -28,6 +28,12 @@ export default function ProductDetailsView() {
     }
   }, [product]);
 
+  useEffect(() => {
+  if (product) {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+}, [product]);
+
   const fetchProduct = async (id) => {
     try {
 
